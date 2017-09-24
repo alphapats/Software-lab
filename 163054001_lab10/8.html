@@ -1,0 +1,174 @@
+
+
+<html>
+<style type="text/css">
+	.button {
+    background-color: LightGreen; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+</style>
+<head>
+ <script type="text/javascript">
+ 
+	function er (msg, url, line) {
+		alert ("Message:" + msg)
+		alert ("url:" + url)
+		alert ("line:" + line)
+	}
+	window.onerror = er
+
+
+
+ flag=0;
+	function handle (element) 
+	{
+			//var element1 = document.getElementById(" 12")
+		
+			var id1= element.id;
+			var left= Number(id1)-1
+			var right= Number(id1)+1
+			var down= Number(id1)+4
+			var up= Number(id1)-4
+			
+			console.log(flag)
+			if(flag == 0)
+			{
+				colorused="Green";
+			}
+			if(flag == 1)
+			{
+				colorused="LightGreen";
+			}
+
+			if(element.style.backgroundColor==colorused)
+			{
+			return;	
+			}	
+			else
+			{
+				element.style.backgroundColor=colorused;
+			}
+
+			if(left >0 && left != 4 && left != 8 && left != 12 )
+			{ 
+			var elementleft = document.getElementById(left.toString())
+			elementleft.style.backgroundColor=colorused;
+			
+			}
+		
+
+			if(right <17 && right != 5 && right != 9 && right != 13)
+			{
+				var elementright = document.getElementById(right.toString())
+				elementright.style.backgroundColor=colorused;
+				
+			}
+			
+
+			if(down <17)
+			{
+			var elementdown = document.getElementById(down.toString())
+			elementdown.style.backgroundColor=colorused;
+			
+			}
+			
+
+			if(up >0)
+			{
+			var elementup = document.getElementById(up.toString())
+			elementup.style.backgroundColor=colorused;
+			}
+			test()
+			
+	}
+
+	function test()
+	{
+		count2=0;
+		count1=0;
+		for (y=1;y<17;y++)
+		{
+			
+		var element = document.getElementById(y.toString())
+		
+		//console.log(element.style.backgroundColor)
+		if(element.style.backgroundColor=="Green")
+		{
+			
+			count1 = count1+1;
+		}
+		
+		if(element.style.backgroundColor=="LightGreen")
+		{
+			count2 = count2+1;
+		}
+
+		}
+		if(count1==16)
+		{
+			flag = 1;
+		}
+		
+		if(count2==16)
+		{
+			flag = 0;
+		}
+	
+
+	}	
+
+	
+
+ </script>
+</head>
+
+<body bgcolor="violet">
+
+<center> 
+<h1> COLOR THE NEIGHBOUR <br> CLICK ON PIECE TO COLOR/UNCOLOR THE NEIGHBOURS  <br>  </h1>
+<form >
+ 
+<table id="t" align = "center" border="1"  style="width:300px; height:300px">
+<tr> 
+<td align="center" id="a" > <input class="button" style="width:100%;height:100%" type="button" value = "" id="1" onclick="handle(this)"/> </td> 
+<td align="center" id="b"> <input class="button" style="width:100%;height:100%" type="button" value = "" id="2" onclick="handle(this)"/> </td> 
+<td align="center" id="c"> <input class="button" style="width:100%;height:100%" type="button" value = "" id="3" onclick="handle(this)"/> </td> 
+<td align="center" id="d"> <input class="button" style="width:100%;height:100%" type="button" value = "" id="4" onclick="handle(this)"/> </td> 
+</tr>
+<tr>
+<td align="center" id="e"> <input class="button" style="width:100%;height:100%" type="button" value = "" id="5" onclick="handle(this)"/> </td> 
+<td align="center" id="f"> <input class="button" style="width:100%;height:100%" type="button" value = "" id="6" onclick="handle(this)"/> </td> 
+<td align="center" id="g"> <input class="button" style="width:100%;height:100%" type="button" value = "" id="7" onclick="handle(this)"/> </td> 
+<td align="center" id="h"> <input class="button" style="width:100%;height:100%" type="button"  value = "" id="8" onclick="handle(this)"/> </td> 
+</tr>
+<tr>
+<td align="center" id="i"> <input class="button" style="width:100%;height:100%" type="button" value = "" id="9" onclick="handle(this)"/> </td> 
+<td align="center" id="j"> <input class="button" style="width:100%;height:100%" type="button" value = "" id="10" onclick="handle(this)"/> </td> 
+<td align="center" id="k"> <input class="button" style="width:100%;height:100%" type="button" value = "" id="11" onclick="handle(this)"/> </td> 
+<td align="center" id="l"> <input class="button" style="width:100%;height:100%" type="button"  value = "" id="12" onclick="handle(this)"/> </td> 
+</tr>
+<tr>
+<td align="center" id="m"> <input class="button" style="width:100%;height:100%" type="button" value = "" id="13" onclick="handle(this)"/> </td> 
+<td align="center" id="n"> <input class="button" style="width:100%;height:100%" type="button" value = "" id="14" onclick="handle(this)" /> </td> 
+<td align="center" id="o"> <input class="button" style="width:100%;height:100%" type="button" value = "" id="15" onclick="handle(this)" /> </td> 
+<td align="center" id="p"> <input  class="button" style="width:100%;height:100%" type="button"  value = "" id="16" onclick="handle(this)"/> </td> 
+</tr>
+
+</table>
+<br>
+
+<p>
+HAVE A BREAK. ENJOY THE GAME.
+</p>
+</form>
+</center>
+</body>
+
+
+
+</html>

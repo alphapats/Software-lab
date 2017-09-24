@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+ <script type="text/javascript">
+ 
+ 	function er (msg, url, line) {
+		alert ("Message:" + msg)
+		alert ("url:" + url)
+		alert ("line:" + line)
+	}
+	window.onerror = er
+	
+	var x=16
+	function up () {
+		upper = x-4;
+		if (upper<1) 
+		{
+		alert("Can't go up");
+		return ;
+		 }
+		 else
+		 {
+		myswap(upper);
+		x=upper;
+		}
+	
+	}
+
+
+	function down () {
+		downc = x+4;
+
+		if (downc>16) 
+		{
+		alert("Can't go down");
+		return ;
+		 }
+		 else
+		 {
+		myswap(downc);
+		x=downc;
+		}
+	}
+
+
+
+	function right () {
+		rightc = x+1;
+
+		if (rightc>16) 
+		{
+		alert("Can't go right");
+		return ;
+		 }
+		 else
+		 {
+		myswap(rightc);
+		x=rightc;
+		}
+	}	
+
+
+	function left () {
+		leftc = x-1;
+		if (leftc<1) 
+		{
+		alert("Can't go left");
+		return ;
+		 }
+		 else
+		 {
+		myswap(leftc)
+		x=leftc;
+		}
+	}
+
+	function myswap(actvar)
+	{
+			var element1 = document.getElementById(x.toString())
+			var element2 = document.getElementById(actvar.toString())
+		
+			var clonedElement1 = element1.cloneNode(true);
+			var clonedElement2 = element2.cloneNode(true);
+
+			clonedElement1.id=element2.id;
+			clonedElement2.id=element1.id;
+
+			element2.parentNode.replaceChild(clonedElement1, element2);
+			element1.parentNode.replaceChild(clonedElement2, element1);
+		
+	}
+
+ </script>
+</head>
+
+<body bgcolor="lightblue">
+
+
+<h1> 699 Demo Table Cell <br> Element Change <br> Click the UP Button </h1>
+
+ <table border="1"  style="width:300px; height:300px">
+ <tr> <td id="1" style="width:10%" bgcolor="#F0000"> <br><br><br>   </td> <td id="2" style="width:10%" bgcolor="#F0000"> <br><br><br>   </td> <td id="3" style="width:10%" bgcolor="#F0000">  <br><br><br>  </td> <td id="4" style="width:10%" bgcolor="#F0000">  <br><br><br>  </td> </tr>
+ <tr> <td id="5" style="width:10%" bgcolor="#F0000"> <br><br><br>   </td> <td id="6" style="width:10%" bgcolor="#F0000"> <br><br><br>   </td> <td id="7" style="width:10%" bgcolor="#F0000"> <br><br><br>   </td> <td id="8" style="width:10%" bgcolor="#F0000">    <br><br><br></td> </tr>
+ <tr> <td id="9" style="width:10%" bgcolor="#F0000">  <br><br><br>  </td> <td id="10" style="width:10%" bgcolor="#F0000"> <br><br><br>   </td> <td id="11" style="width:10%" bgcolor="#F0000"> <br><br><br>   </td> <td id="12" style="width:10%" bgcolor="#F0000">  <br><br><br>  </td> </tr>
+ <tr> <td id="13" style="width:10%" bgcolor="#F0000"> <br><br><br>   </td> <td id="14" style="width:10%" bgcolor="#F0000">  <br><br><br>  </td> <td id="15" style="width:10%" bgcolor="#F0000">  <br><br><br>  </td> <td id="16" style="width:10%" bgcolor="#00000"> <br><br><br>   </td> </tr>
+</table>
+
+<br>
+<table>
+	   <tr> <td></td> <td align="center"> <input type="button" onclick="up()" value = "UP" /> </td> <td></td>
+	<tr> <td><input type="button" onclick="left()" value = "LEFT" /> </td> <td></td><td><input type="button" onclick="right()" value = "RIGHT" /></td><br>
+	   <tr> <td></td> <td align="center"> <input type="button" onclick="down()" value = "DOWN" /> </td> <td></td>
+</table>
+
+</body>
+
+
+</html>

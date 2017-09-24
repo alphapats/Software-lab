@@ -1,0 +1,61 @@
+<html>
+<head>
+
+<script type="text/javascript">
+
+	function er (msg, url, line) {
+		alert ("Message:" + msg)
+		alert ("url:" + url)
+		alert ("line:" + line)
+	}
+	window.onerror = er
+	
+	try{
+
+	function f() {
+     input_number = document.forms["problem1"]["v1"];
+          x=  Number (input_number.value)
+
+	if (isNaN(x)) 
+  	{
+    	alert("Must input numbers");
+    	return false;
+ 	 }
+         var num =x
+	var y =0
+	while( x!=0 )
+    	{
+        var remainder = x%10;
+	var y = y*10+ remainder
+        x =  Math.floor(x /10);
+   	 }
+	 
+	if (x<0)
+	alert ("Message:" + msg)
+         if(num ==y)
+         document.write(num + " is palindrome number")
+	else
+	document.write(num + " is not palindrome number")
+     }
+	}
+catch(e){
+	alert('An error has occurred: '+e.message)
+}
+
+
+</script>
+</head>
+
+
+<body bgcolor="aqua"> <center>
+	<form name="problem1" onsubmit="f()">
+		<h3> <font color="red">Enter Number to be checked: <br> </h3>
+		 <input type="text" name="v1">
+		<br>
+		<input type="submit" value="Go!"> 
+	</form>
+
+</center>
+</body>
+
+</html>

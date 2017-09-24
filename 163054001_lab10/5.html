@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+ <script type="text/javascript">
+
+	function er (msg, url, line) {
+		alert ("Message:" + msg)
+		alert ("url:" + url)
+		alert ("line:" + line)
+	}
+	window.onerror = er
+	
+	var x=16
+	function up () {
+		upper = x-4;
+		if (upper<1) 
+		{
+		alert("Can't go up");
+		return ;
+		 }
+		 else
+		 {
+		myswap(upper);
+		x=upper;
+		}
+
+		test();
+	
+	}
+
+
+	function down () {
+		downc = x+4;
+
+		if (downc>16) 
+		{
+		alert("Can't go down");
+		return ;
+		 }
+		 else
+		 {
+		myswap(downc);
+		x=downc;
+		}
+		test();
+	}
+
+
+
+	function right () {
+		rightc = x+1;
+
+		if (rightc<17 && rightc != 5 && rightc != 9 && rightc != 13) 
+		{
+			myswap(rightc);
+			x=rightc;
+
+		 }
+		 else
+		 {
+			alert("Can't go right");
+			return ;
+		}
+		test();
+	}	
+
+
+	function left () {
+		leftc = x-1;
+		if (leftc>0 && leftc != 4 && leftc != 8 && leftc != 12) 
+		{
+			myswap(leftc)
+			x=leftc;
+		 }
+		 else
+		 {
+		 	alert("Can't go left");
+			return ;
+		
+		}
+		test();
+	}
+
+	function myswap(actvar)
+	{
+			var element1 = document.getElementById(x.toString())
+			var element2 = document.getElementById(actvar.toString())
+			
+			var clonedElement1 = element1.cloneNode(true);
+			var clonedElement2 = element2.cloneNode(true);
+
+			clonedElement1.id=element2.id;
+			clonedElement2.id=element1.id;
+
+			element2.parentNode.replaceChild(clonedElement1, element2);
+			element1.parentNode.replaceChild(clonedElement2, element1);
+			
+	}
+
+	function test()
+	{
+		count=0;
+		count1=0;
+		for (y=1;y<17;y++)
+		{
+			
+		var element = document.getElementById(y.toString())
+		console.log(element);
+
+		val=element.innerHTML;
+		console.log('val',val);
+		num =val.match(/\d/g);
+		console.log('num',num);
+		num=num.join("");
+		console.log('num2',num);
+		if(element.id == num )
+		{
+			count1 = count1 +1;
+				
+		}
+		//console.log(lement);
+		
+		if(element.bgColor == "#F0000")
+		{
+			count = count+1;
+		}
+		}
+		if(count1==16)
+		{
+			if (document.getElementById("16").bgColor == "#00000" )
+		{
+			
+			alert("CONGRATULATIONS!!!YOU WON..GAME COMPLETE")
+		}
+		}
+	
+		
+
+	}
+
+ </script>
+</head>
+
+<body bgcolor="lightgreen">
+
+<center>
+<h1> 15 PUZZLE GAME <br> Gem Puzzle, Boss Puzzle, Game of Fifteen, Mystic Square <br> USE BUTTONS </h1>
+
+ <table id="t" aligh = "center" border="1"  style="width:300px; height:300px">
+ <tr style="text-align:center;"> <td id="1" style="width:10%" bgcolor="#F0000"> <br><br>1<br>   </td> <td id="2" style="width:10%" bgcolor="#F0000"> <br><br>2<br>   </td> <td id="3" style="width:10%" bgcolor="#F0000">  <br><br>3<br>  </td> <td id="4" style="width:10%" bgcolor="#F0000">  <br><br>4<br>  </td> </tr>
+ <tr style="text-align:center;"> <td id="5" style="width:10%" bgcolor="#F0000"> <br><br>5<br>   </td> <td id="6" style="width:10%" bgcolor="#F0000"> <br><br>6<br>   </td> <td id="7" style="width:10%" bgcolor="#F0000"> <br><br>7<br>   </td> <td id="8" style="width:10%" bgcolor="#F0000">    <br><br>8<br></td> </tr>
+ <tr style="text-align:center;"> <td id="9" style="width:10%" bgcolor="#F0000">  <br><br>9<br>  </td> <td id="10" style="width:10%" bgcolor="#F0000"> <br><br>10<br>   </td> <td id="11" style="width:10%" bgcolor="#F0000"> <br><br>11<br>   </td> <td id="12" style="width:10%" bgcolor="#F0000">  <br><br>12<br>  </td> </tr>
+ <tr style="text-align:center;"> <td id="13" style="width:10%" bgcolor="#F0000"> <br><br>13<br>   </td> <td id="14" style="width:10%" bgcolor="#F0000">  <br><br>14<br>  </td> <td id="15" style="width:10%" bgcolor="#F0000">  <br><br>15<br>  </td> <td id="16" style="width:10%" bgcolor="#00000"> <br><br>16<br>   </td> </tr>
+</table>
+
+<br>
+<table>
+	   <tr> <td></td> <td align="center"> <input type="button" onclick="up()" value = "UP" /> </td> <td></td>
+	<tr> <td><input type="button" onclick="left()" value = "LEFT" /> </td> <td></td><td><input type="button" onclick="right()" value = "RIGHT" /></td><br>
+	   <tr> <td></td> <td align="center"> <input type="button" onclick="down()" value = "DOWN" /> </td> <td></td>
+</table>
+</center>
+</body>
+
+
+</html>

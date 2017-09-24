@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+<style>
+    table
+    {
+    	border:1px solid black;
+    	width:400;
+    	height:400;
+    	
+    }
+   
+    table td
+    {
+    	
+    	border-bottom:1px solid green;
+    	width: 200;   
+    	height: 200;
+    	text-decoration: none;
+    	
+    	overflow: hidden;
+    }
+</style>
+
+
+
+<head >
+<script type="text/javascript">
+var count=0
+flag=0;
+	function er (msg, url, line) {
+		alert ("Message:" + msg)
+		alert ("url:" + url)
+		alert ("line:" + line)
+	}
+	window.onerror = er
+
+	function game(x)
+	{
+		if (x == "image1")
+		{
+
+			document.getElementById("img1").src="image1.png"
+			document.getElementById("img2").src="blank.png"
+			document.getElementById("img3").src="blank.png"
+			document.getElementById("img4").src="blank.png"
+		
+		}
+
+		if (x == "image2")
+		{
+			document.getElementById("img2").src="image2.jpg"
+			document.getElementById("img1").src="blank.png"
+			document.getElementById("img3").src="blank.png"
+			document.getElementById("img4").src="blank.png"
+			
+			
+		}
+
+		if (x == "image3")
+		{
+			document.getElementById("img3").src="image3.png"
+			document.getElementById("img2").src="blank.png"
+			document.getElementById("img1").src="blank.png"
+			document.getElementById("img4").src="blank.png"
+						
+		}
+
+		if (x == "image4")
+		{
+			
+			document.getElementById("img4").src="image4.jpeg"
+			document.getElementById("img2").src="blank.png"
+			document.getElementById("img3").src="blank.png"
+			document.getElementById("img1").src="blank.png"
+		
+		}
+	
+	}
+
+	
+
+
+</script>
+</head>
+
+
+<body bgcolor="lightgreen">
+ <center>
+
+<h1> FIND IMAGE </h1>
+<div>
+ <form>
+<table border="1" >
+
+<tr> 
+ <td id="1"><input name="myradio" type="hidden" value="0" /> <input type="radio" name="selection" unchecked value="image1" id="selection1" onchange="game(this.value)" > IMAGE1 </td><td> 
+<input type="radio" name="selection" value="image2" id="selection2" onchange="game(this.value)"> IMAGE2  </td> </tr> <tr><td> <input type="radio" name="selection" value="image3" id="selection3" onchange="game(this.value)"> IMAGE3</td><td><input type="radio" name="selection" value="image4" id="selection4" onchange="game(this.value)"> IMAGE4</td></tr>
+</table>
+<table border="1"  >
+<tr> <td> <img Id="img1" src="blank.png"  style="width:200px;height:200px"> </td><td><img Id="img2" src="blank.png" style="width:200px;height:200px" ></td></tr>
+<tr> <td> <img Id="img3" src="blank.png" style="width:200px;height:200px"> </td><td><img Id="img4" src="blank.png" style="width:200px;height:200px" ></td></tr>
+</table>
+	
+<h4 id="headerA"> CLICK ON RADIO BUTTON </h4>
+
+
+
+</center>
+</form> 
+</div>
+</body>
+
+
+</html>

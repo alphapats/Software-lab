@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+
+</head>
+
+
+<body bgcolor="gray"> <center>
+	<form name="problem2" action="" >
+		<h3> <font color="white">Enter Number of rows: <br> </h3>
+		 <input type="text" name="v1">
+		<br>
+		<input type="button" onclick="f()" value="Go!"> 
+	</form>
+<div Id="printarea"> </div>
+
+<div Id="newarea" ></div>
+</center>
+
+
+<script type="text/javascript">
+
+	function er (msg, url, line) {
+		alert ("Message:" + msg)
+		alert ("url:" + url)
+		alert ("line:" + line)
+	}
+	window.onerror = er
+	
+	
+	
+	function f() {
+     input_number = document.forms["problem2"]["v1"];
+          x=  Number (input_number.value)
+
+	if (isNaN(x)) 
+  	{
+    	alert("Must input numbers");
+    	return false;
+ 	 }
+
+	var new_form = '<form name="ELEMENT" action=""> <h3> <font color="white">Enter Numbers for sorting:</h3><br>';
+		
+	for(var y=0;y<x;y++)
+	{		 
+	new_form= new_form + ' <input type="text" Id="z'+y+'"> <br>' ;
+	}
+	new_form= new_form + '<input type="button" onclick="mysort('+x+')"  value="SORT!">';
+	new_form=new_form+'</form>'
+   
+	document.getElementById("printarea").innerHTML = new_form;
+}
+
+ 
+function mysort(num) {
+
+	var ele = new Array();
+	for(var i=0;i<num;i++)
+	{
+	var inum="z"+i;
+	//var inputnum= document.forms["ELEMENT"][inum]
+	var inputnum=document.getElementById(inum);
+	
+	ele[i]=Number(inputnum.value);
+
+	}
+	
+	ele.sort(function(a, b){return a-b});
+	
+	var out = '<h4> The sorted elements </h4> <br>';
+	for (var a=0;a<num;a++)
+	{
+	out=out+ ele[a]+'<br>';
+	}
+
+	document.getElementById("newarea").innerHTML = out;
+	}
+</script>
+
+</body>
+
+
+</html>

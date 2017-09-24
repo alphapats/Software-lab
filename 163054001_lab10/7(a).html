@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html>
+<head >
+<script type="text/javascript">
+var count=0
+flag=0;
+	function er (msg, url, line) {
+		alert ("Message:" + msg)
+		alert ("url:" + url)
+		alert ("line:" + line)
+	}
+	window.onerror = er
+
+	function game(sel)
+	{
+		count=count+1
+		var y=sel;
+		
+		if (flag == 0)
+		{
+			g1(y);
+			return;
+		}
+
+		if(flag == 1)
+		{
+			g2(y);
+			return;
+		}
+
+		if(flag == 2)
+		{
+			g3(y);
+			return;
+		}
+
+		if(flag == 3)
+		{
+			g4(y);
+			return;
+		}
+	}
+
+	
+	function g1 (y) {
+
+		//var x = document.querySelector('input[name=selection]:checked').value;
+		var x=y;
+		elem = document.getElementById("headerA")
+			
+		if (x == "image1")
+		{
+
+			alert ("correct answer.  Number of tries : "+ count +"  .Now answer Next")
+			elem.innerHTML = "QUESTION: Find Sun"
+			document.getElementById("img1").src="image1.png"
+			flag=1
+
+			
+		}
+		else
+		{
+			alert("Sorry wrong choice.Try again.. No of tries :" + count)
+		}
+
+		}
+
+	function g2 (y)
+	  {
+
+	  		//var x = document.querySelector('input[name=selection]:checked').value;
+	  		var x=y;
+			elem = document.getElementById("headerA")
+		
+			if (x == "image2")
+		{
+			alert ("correct answer. Number of tries : "+ count +"  .Now answer Next")
+			elem.innerHTML = "QUESTION: Find Flag"
+			document.getElementById("img2").src="image2.jpg"
+			flag=2
+			
+		}
+		else
+		{
+			alert("Sorry wrong choice.Try again.. No of tries :" + count)
+		}
+
+		
+	}
+
+		function g3 (y)
+	  {
+	  		var x=y;
+	  		//var x = document.querySelector('input[name=selection]:checked').value;
+			elem = document.getElementById("headerA")
+		
+			if (x == "image3")
+		{
+			alert ("correct answer. Number of tries : "+ count +"  .Now answer Next")
+			elem.innerHTML = "QUESTION: Find Flower"
+			document.getElementById("img3").src="image3.png"
+			flag=3
+			
+		}
+		else
+		{
+			alert("Sorry wrong choice.Try again.. No of tries :" + count)
+		}
+		
+	}
+
+
+	function g4 (y)
+	  {
+	  		var x=y;
+	  		//var x = document.querySelector('input[name=selection]:checked').value;
+			elem = document.getElementById("headerA")
+		
+			if (x == "image4")
+		{
+			alert ("correct answer. You Won. Game completed. No of tries :" + count)
+			elem.innerHTML = "Completed"
+			document.getElementById("img4").src="image4.jpeg"
+			flag=0
+			
+		}
+		else
+		{
+			alert("Sorry wrong choice.Try again.. No of tries :" + count)
+		}
+		
+	}	
+
+
+</script>
+</head>
+
+
+<body bgcolor="lightgreen">
+ <center>
+
+<h1> FIND IMAGE </h1>
+<div>
+ <form>
+<table>
+<tr > <td id="1"> <input name="myradio" type="hidden" value="0" /><input type="radio" name="selection" value="image1" id="selection1" onchange="game(this.value)"> IMAGE1 </td><td><input type="radio" name="selection" value="image2" id="selection2" onchange="game(this.value)"> IMAGE2  </td> <td> <img Id="img1" src="blank.png" height=200 width=200 > </td><td><img Id="img2" src="blank.png" height=200 width=200></td></tr>
+<tr> <td> <input type="radio" name="selection" value="image3" id="selection3" onchange="game(this.value)"> IMAGE3</td><td><input type="radio" name="selection" value="image4" id="selection4" onchange="game(this.value)"> IMAGE4</td><td><img Id="img3" src="blank.png" height=200 width=200 > </td><td><img Id="img4" src="blank.png" height=200 width=200></td></tr>
+</table>
+	
+<h1 id="headerA">QUESTION:  Find moon </h1>
+
+
+
+
+</center>
+</form> 
+</div>
+</body>
+
+
+</html>

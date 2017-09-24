@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<head >
+<script type="text/javascript">
+
+	function er (msg, url, line) {
+		alert ("Message:" + msg)
+		alert ("url:" + url)
+		alert ("line:" + line)
+	}
+	window.onerror = er
+	
+function f(){
+	document.getElementById('img').src = "image2.jpeg";
+}
+
+function g(){
+	document.getElementById('img').src = "index.jpeg";
+}
+
+</script>
+</head>
+
+
+<body bgcolor="lightgreen">
+ <center>
+
+<h1> Toggle Image </h1>
+<div  Id="imagearea">
+<img Id="img" src="index.jpeg" onmouseover="f(this)" onmouseout="g(this)" style="width:50%;height:50%;">
+</div>
+
+</center>
+
+
+
+
+</body>
+
+
+</html>

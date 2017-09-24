@@ -1,0 +1,116 @@
+Lab with Javascript
+
+The purpose of this lab is to know how javascript works and
+we can bring html pages to activity which is executed directly
+under the browser without having to go to the server.
+Each of these labs are about developing an html page with
+javascript embedded in it.
+
+To see if your program works, you should click on your html
+page (i.e. open it in the browser) Enable javascript
+in the browser if it isn't already. Run and understand
+the demos. When you feel that you have understood a demo
+with which one of the following problems can be attempted,
+go ahead with that problem and solve it! But if you proceed
+with more demos in the Demos folder that I have uploaded, 
+better ways to do the same task may click upon you.
+
+You will notice that there are quite a few aspects to which
+you will get introduced in this lab. These are: 
+programming inside html using javascript, 
+input in html forms, event programming in javascript,
+the dom model of html in which
+one can change html elements and compute with them.
+
+Demos: About 20, uploaded
+	There are half a dozen new demos which were not shown in
+	the class.
+	Demos location:
+	https://www.cse.iitb.ac.in/~rkj/javascript/
+
+Use the folder given for submission structure. Put all the images used, in this folder; this should
+be uploaded.
+
+
+Problem Set
+---------------------
+
+1) Write a javascript interactive program embedded inside
+an html page which tests if a given
+number is a palindrome number. The number can be input using a form.
+
+Let the page be a little colorful.
+
+1a) Add a javascript runtime code error handler to a copy
+of the above program, Make an error in this copy of the program
+and show that it really works (i.e., an error message is popped 
+up due to a bug in javascript program).
+
+Let the error be shown using alert popup. 
+
+you must use this functionality of error catching in all
+your programs below so that it helps you in catching errors.
+
+No submission required for 1a
+
+2) Javascript program asks for number N, then it creates
+a form with N blank cells to read N numbers. The program sorts
+the numbers input by the user and displays them  in the same page.
+use sort function available in javascript... no need to write your own.
+
+3) Write a javascript program which toggles an image when the
+mouse enters the image area and when it leaves after entering.
+You can select your set of images.
+
+4) Take the table element in the following in the Demo pack
+and upgrade it to let the black cell move around correctly
+on button clicks.
+
+https://www.cse.iitb.ac.in/~rkj/javascript/dom/20DOMGame.html
+
+
+5) Develp a 15 Puzzle game board using the scheme of your
+  solution to problem 4. In 15 puzzle, we have 4X4 board 
+  with numbers from 1 to 15. One piece is blank. Using the
+  event button keys, the numbered pieces can be moved around
+   if the movement is valid (in horizontal or vertical
+    direction, and adjacent to blank piece, and within board only) 
+
+   How do you play this game: Initially 1..15 and a blank
+   are shown in order. The challenger (a human) moves 
+   the pieces around and then asks the solver to bring them
+   back  in order to original position.
+   
+ (https://en.wikipedia.org/wiki/15_puzzle)
+
+6) Another approach to 15 puzzle with array of
+clickable buttons,
+ instead of the above solution that used colored table cells and 
+ additional movement keys. Now the button keys will be
+ numbered. Upon a click, you know which number has been clicked.
+One of the buttons shows  a "blank piece"
+Trap mouse clicks on these buttons and develop the 15 puzzle 
+board game through mouse click event handler.
+
+See demo 21 for an idea of how this table of button can look like.   
+https://www.cse.iitb.ac.in/~rkj/javascript/dom/21buttontable.html
+
+7) Guessing game:
+
+   Make a 2x2 array of radio buttons
+   Make a 2X2 array of images but initially they are hidden (you may show a blank image)
+
+ Then the computer asks a question: find such and such image? e.g. find flower? or find river?
+
+ (use DOM content change constructs to change the question, e.g. as in:
+ https://www.cse.iitb.ac.in/~rkj/javascript/dom/18DOM-ToggleContent.html )
+
+ As you click the buttons, keep a count of tries and then show the no. of tries
+  and the image if the click is correct.
+
+ Repeat it till all images are found.. last image will be obvious but keep the count.
+
+8) Do one of the problems shown in the attached videos.
+  One is called "tic-tac-toe" and the other is "color the neighbors"
+
+9) Enjoy!
