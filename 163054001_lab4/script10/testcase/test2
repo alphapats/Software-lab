@@ -1,0 +1,12 @@
+C if statement
+
+if (testExpression) 
+{
+   // statements
+}
+
+The if statement evaluates the test expression inside parenthesis.
+
+If test expression is evaluated to true (nonzero), statements inside the body of if is executed.
+
+If test expression is evaluated to false (0), statements inside the body of if is skipped.

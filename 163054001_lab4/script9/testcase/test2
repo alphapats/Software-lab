@@ -1,0 +1,8 @@
+A shell script is a computer program designed to be run by the Unix shell, a command-line interpreter.[1] The various dialects of shell scripts are considered to be scripting languages.
+Typical operations performed by shell scripts include file manipulation, program execution, and printing text. A script which sets up the environment, runs the program, and does any necessary
+ cleanup, logging, &c is called a wrapper.
+The typical Unix/Linux/Posix-compliant installation includes the Korn Shell (ksh) in several possible versions such as ksh88, Korn Shell '93 and others. The oldest shell still in common use is the
+ Bourne shell (sh); Unix systems invariably include also the C Shell (csh), Bourne Again Shell (bash), a remote shell (rsh), a secure shell for SSL telnet connections (ssh), and a shell which is a
+ main component of the Tcl/Tk installation usually called tclsh; wish is a GUI-based Tcl/Tk shell. The C and Tcl shells have syntax quite similar to that of said programming languages, and the Korn
+ shells and Bash are developments of the Bourne shell, which is based on the ALGOL language with elements of a number of others added as well.[2] On the other hand, the various shells plus tools like
+ awk, sed, grep, and BASIC, Lisp, C and so forth contributed to the Perl programming language.[3]

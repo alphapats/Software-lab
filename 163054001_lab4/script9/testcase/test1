@@ -1,0 +1,10 @@
+When the first digital computers appeared in the early 1940s,[9] the instructions to make them operate were wired into the machine. Practitioners quickly realized that this design was not flexible
+ and came up with the "stored program architecture" or von Neumann architecture. Thus the division between "hardware" and "software" began with abstraction being used to deal with the complexity of
+ computing.
+Programming languages started to appear in the 1950s and this was also another major step in abstraction. Major languages such as Fortran, ALGOL, and COBOL were released in the late 1950s to deal
+ with scientific, algorithmic, and business problems respectively. Edsger W. Dijkstra wrote his seminal paper, "Go To Statement Considered Harmful",[10] in 1968 and David Parnas introduced the key
+ concept of modularity and information hiding in 1972[11] to help programmers deal with the ever increasing complexity of software systems.
+
+The term "software engineering" was coined by Anthony Oettinger[12] and then was used in 1968 as a title for the world's first conference on software engineering, sponsored and facilitated by NATO.
+ The conference was attended by international experts on software who agreed on defining best practices for software grounded in the application of engineering. The result of the conference is a
+ report that defines how software should be developed. The original report is publicly available.[13]
