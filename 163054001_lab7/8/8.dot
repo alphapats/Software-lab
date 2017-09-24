@@ -1,0 +1,15 @@
+digraph H{
+start[shape="box",height="0.4",width="0.8",label="start",style="filled",color="darkgreen"];
+rhom2[shape="parallelogram",height="0.05",width="0.05",color="violet",style="filled",label="\'Which is the \nbest subject\'"];
+rhom3[shape="diamond",height="0.05",width="0.05",color="magenta",style="filled",label="Does answer=\n\'Computer Science\'?"];
+rhom4[shape="parallelogram",height="0.05",width="0.05",color="violet",style="filled",label="Ouput\'\n\'Of course it is!'"];
+rhom5[shape="parallelogram",height="0.05",width="0.05",color="violet",style="filled",label="Ouput\'\n\Try again!'"];
+stop[shape="box",height="0.4",width="0.8",label="stop",style="filled",color="darkgreen"];
+
+start->rhom2;
+rhom2->rhom3;
+rhom3->rhom4[label="Yes"];
+rhom3->rhom5[label="No"];
+rhom5->rhom2;
+rhom4->stop;
+}

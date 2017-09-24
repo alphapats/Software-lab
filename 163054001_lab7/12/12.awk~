@@ -1,0 +1,23 @@
+BEGIN{FS="";RS="|";gsub("^$","");i=0;printf "digraph H{\ninvis1[style=\"invis\"]; \nstart[label=\"Start\"]; \nend[label=\"end\",peripheries=2];\ninvis1->start;"}
+{
+
+{
+printf "start->P"i"[label=\""$1"\"];\n";
+for(x=2;x<=NF;x++)
+{		
+	printf "P"i"->P"(i+1)"[label=\""$x"\"];\n";
+	i++;
+}
+i++;
+
+if($0 == "+")
+{
+printf
+}
+
+printf "P"(i-1)"->end;\n";
+}
+}
+
+END{printf "\n}"}
+

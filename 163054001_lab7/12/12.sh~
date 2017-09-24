@@ -1,0 +1,2 @@
+awk -f 12.awk inputdata12>12.dot
+

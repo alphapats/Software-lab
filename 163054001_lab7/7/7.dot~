@@ -1,0 +1,3 @@
+digraph M{
+entry ->"q=&r"->"p=q"
+}

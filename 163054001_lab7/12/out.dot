@@ -1,0 +1,22 @@
+digraph H{
+invis1[style="invis"]; 
+start[label="S"]; 
+end[label="end",shape=circle,peripheries=2];
+invis1->start;
+start->P0[label="a"];
+P0->P1[label="b"];
+P1->End;
+start->P2[label="g"];
+P2->P3[label="h"];
+P3->End;
+start->P4[label="c"];
+P4->P4[label="d"];
+P4->P5[label="e"];
+P5->End;
+start->P6[label="b"];
+P6->P7[label="d"];
+P7->P7[label="d"];
+P7->P8[label="f"];
+P8->End;
+
+}

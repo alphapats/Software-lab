@@ -1,0 +1,31 @@
+digraph K{
+	box1[shape="diamond",style="rounded",label="Do you have \n assignment?"];
+	box2[shape="diamond",style="rounded",label="Is there something \n else you would rather do?"];
+	box3[shape="box",style="rounded",label="You are lying"];
+	box4[shape="diamond",style="rounded",label="Is assignment due in \n less than 12 hours?"];
+	box5[shape="polygon",sides="8",peripheries="3",style="rounded",style="filled",color="grey",label="Start Working"];
+	box6[shape="box",style="rounded",label="Watch TV"];
+	box7[shape="box",style="rounded",label="Get a life"];
+	box8[shape="box",style="rounded",label="Check your emails"];
+	box9[shape="box",style="rounded",label="Do facebook"];
+	box10[shape="box",style="rounded",label="Have snacks"];
+	box11[shape="diamond",style="rounded",label="Check what time it is?"];
+
+
+
+	yes1[shape="box",style="filled",color="red",label="yes"];
+	no1[shape="box",style="filled",color="green",label="no"];
+	yes2[shape="box",style="filled",color="red",label="yes"];
+	no2[shape="box",style="filled",color="green",label="no"];
+	yes3[shape="box",style="filled",color="red",label="yes"];
+	no3[shape="box",style="filled",color="green",label="no"];
+
+
+box1->yes1->box2;
+box1->no1->box3;
+box2->yes2->box4;
+box2->no2->box7;
+box4->yes3->box5;
+box4->no3->box6->box8->box9->box10->box11;
+box11->box4;
+}
