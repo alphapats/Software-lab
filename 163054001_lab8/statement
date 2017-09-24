@@ -1,0 +1,75 @@
+Write the python code into file problem[1-5].py file inside respective problem folders.
+You can use create_tar.sh to create a tar file to submit.
+Run evaluate_all.sh to evaluate all the python evaluation scripts at a time.
+
+
+
+
+1.  write function sort(l) to sort an input list
+
+l is a list built from the numbers from a file
+
+program receives one command line argument: data file name
+	we will try your program on our data files
+
+sample input file: "data1"
+print the sorted list on terminal
+
+you can implement any sorting algorithm of your choice 
+
+as you write this on your own, you will discover various errors
+ and learn python automatically... have fun
+
+
+
+
+
+2.  write a function binsearch(l,x) 
+			returns -1 if x is not found in l, 
+			else it returns the index of x
+
+program receives two command line arguments: 
+	data file name, 
+	number to be found
+assume that input file is of sorted numbers
+sample file given as "data2"
+
+call function binsearch() on 
+	a list built from input file, 
+	and the search key received from command line argument	
+
+we will try your program on our data files
+
+
+
+3. write a function column_collapse(L) 
+		L is a list of lists 
+		the function prints the output list
+
+  one example:
+	L = [ [1,2,3], [4,5,4,10,20], [8,1,9,10]]
+	return result = [13,8,16,20,20]
+
+  input of lists of lists comes from a file
+		donot assume how many lists are there in this file
+		donot assume how many iteme are there in each list
+ sample file given: data3
+
+
+4. Function det(M):
+	return determinant of a square matrix M
+
+  matrix is to be read from an input file
+ sample input file: data4
+
+ print the output value
+
+
+
+5. Frequency counter: function freqcount(L)
+	returns a list of counts (dictionary) of each unique 
+	word in the input list L
+
+ example:   freqcount( [ ["a", "ab", "ac"], ["ac", "ac", "a"] ])  returns
+{ "a":2, "ab":1, "ac":3}
+

@@ -1,0 +1,36 @@
+import sys
+
+def make_list():
+	#Code to process the input file and return a list l
+	list1=[]
+	f=open(sys.argv[1])
+	for line in f:
+		element = line.strip()
+		list1.append(int(element))
+	return list1
+
+
+def binsearch(l,x):
+	#Code to search the number x in l.
+	#print the number of steps taken to reach x
+	list=l
+	length=len(list)-1
+	first=0
+	last=len(list)-1
+	found=0
+	while(first<=last):
+		mid=(first + last)//2
+		midindex=mid
+		if (x == list[mid]):
+			print (midindex)
+			found=1
+			break
+		elif (x < list[mid]):
+			last=mid-1
+		elif(x > list[mid]):
+			first=mid+1
+	if(found==0):
+		print (-1)
+
+givenlist=make_list()
+binsearch(givenlist,int(sys.argv[2]))
