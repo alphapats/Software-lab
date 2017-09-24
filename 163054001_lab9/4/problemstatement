@@ -1,0 +1,7 @@
+Function cartesian_product (A,B)
+
+Given two sets A and B , generate cartesian product (A x B) from
+these sets.
+
+
+Note: A and B are sets and not lists

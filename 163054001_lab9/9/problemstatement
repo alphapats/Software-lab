@@ -1,0 +1,87 @@
+Using module html.parser
+
+
+write a function links(url) that take an http url as input and 
+returns two set (not list!) of internal 
+links and external links.
+
+
+For example to test your function you can use test.py which is provided:
+
+python3 test.py 'http://cse.iitb.ac.in'
+
+which calls your links function and prints
+
+/room-scheduler/index.php
+/page132
+/page130
+/page137
+/~ttc/
+/page41
+/page40
+/page139
+/~csea/
+/page185
+/page176
+/page175
+/page46?staffType=technical
+/page212
+/page31
+/page199
+/
+/page30
+/page161
+/page32
+/page33
+/page46?staffType=administrative
+/webcal/week.php?user=_NUC_department
+/page37
+/page16
+/page17
+/page14
+/~ttc
+/page92
+/page117
+/page78
+/page36
+/page94
+/page95
+/webcal/view_entry.php?id=4412&date=20160920&user=_NUC_department
+/page76
+/page77
+/page206
+/deptwiki/doku.php
+/page222?batch=DD5
+/~swlab/how_to_start_video_conf.html
+/page142
+/page140
+/page72
+/page222?batch=MTech2
+/page222?batch=MTech3
+/page222?batch=BTech4
+/page222?batch=BTech1
+/page222?batch=BTech3
+/page222?batch=BTech2
+/deptwiki/doku.php?do=login&id=start
+/page222?batch=Phd
+/page202
+/infoczar/doku.php?do=login&id=start
+/page35
+/page208
+/page42
+/page20
+/wifi
+/page15
+/page222?batch=MTech1
+
+
+http://www1.iitb.ac.in/academic/toacadcalender.jsp
+http://gpo.iitb.ac.in
+http://www.cse.iitb.ac.in/infoczar/doku.php?id=public:ttc:staff
+http://www.iitb.ac.in/
+https://systems.cse.iitb.ac.in/systems
+http://systems.cse.iitb.ac.in/systems/contacts.html#main
+http://www.it.iitb.ac.in/resources/library/
+http://www.it.iitb.ac.in
+http://www.iitb.ac.in/academic/toacadcalender.jsp
+

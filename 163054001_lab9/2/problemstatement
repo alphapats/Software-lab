@@ -1,0 +1,11 @@
+Function pick(l,c)
+
+Write a function to return a set of words from list l, such that the set contains
+all words which start with character c
+
+for example 
+
+call to pick (["hello", "how", "are", "you"], "h") returns
+    set  {"hello", "how"}
+
+Use must use filter function and no explicit itertions are allowed

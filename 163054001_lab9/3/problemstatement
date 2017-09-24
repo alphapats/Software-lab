@@ -1,0 +1,19 @@
+Function Lcollapse (L)
+
+Given L, a list which contains list of strings, 
+the function concats all the strings occuring
+inside this list of lists into one single string 
+using space as separator. 
+
+
+you must use lambda expressions to define functions which are to 
+be called upon inside reduce
+
+for example
+
+ Lcollapse ([ ["there","will"], ["be", "a", "python"], ["quiz", "next", "week."]])
+ returns
+ 
+  "there will be a python quiz next week."
+
+Note: Use reduce function and no iteration/for statement is allowed

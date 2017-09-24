@@ -1,0 +1,13 @@
+The input datafile named data contains 100 records.
+Each record has a list of 100 integers (in our sample, it is dice throw runs).
+Calculate mean, variance, standard deviation for each record.
+
+Using Pyplot package, create the following plots
+
+ 1.  Record nos. vs. mean values 
+ 2.  In the same graph, plot for variance and standard deviation also.
+ 
+Use package numpy for calculating mean,variance and standard deviation.
+
+Use package matplotlib.pyplot for plotting the graphs.
+

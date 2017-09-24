@@ -1,0 +1,37 @@
+You are given a server which returns reverse of a given string (request) as a response.
+
+Function ispalindrome(host,port,s)
+
+You have to write a function ispalindrome(host,port,s)
+which connects to the server using the host and port parameter and sends a string s as a request,
+receives the response(reverse of the string), and returns
+True or False after comparing both request and response strings
+
+====================
+
+Description of code:
+
+The server script takes ip address and port number as command line arguments. 
+
+How to run the server:
+	python server.py '127.0.0.1' '5000'
+Server output:
+	Server started waiting for client to connect...
+	Connected to host ip:127.0.0.1
+	Received b'malayalam' from 127.0.0.1
+	Sent b'malayalam' to 127.0.0.1
+	Connected to host ip:127.0.0.1
+	Received b'soccer' from 127.0.0.1
+	Sent b'reccos' to 127.0.0.1
+
+
+
+Your client.py file must also take in the server ip address, server port number and input 
+string as command line arguments 
+
+Examples:
+python client.py '127.0.0.1' '5000' 'malayalam'
+   ispalindrome returns True
+
+python client.py '127.0.0.1' '5000' 'soccer'
+	ispalindrome returns False

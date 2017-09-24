@@ -1,0 +1,6 @@
+powerset(s)
+
+Given an input set s, return the powerset of the given input set.
+
+
+Note: s is a set and not a list

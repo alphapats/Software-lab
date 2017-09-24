@@ -1,0 +1,33 @@
+You have to use the facebook api for python and write a python script which returns the first name, lastname and number of friends of a user on facebook.
+==============
+API Docs:
+Note:- visit http://facebook-sdk.readthedocs.io/en/latest/api.html and 
+https://developers.facebook.com/docs/graph-api/ for more information
+===============
+
+Your code needs to take access token as command line argument. 
+To generate your accesstoken visit 
+  https://developers.facebook.com/tools/explorer/  
+  
+  click on generete token
+   
+  select user_friends as access permission
+  
+
+Do not embed your acess token anywhere in your code, but pass it into .py file as command
+line argument in quotes 
+
+We will be using our access token to verify your program
+
+Ex:
+
+python get_fb_details.py 'EAACEhaGIgZDZD......'
+
+prints
+
+First Name:Raj
+Last Name:MN
+Total Friends:419
+
+Note: The above is not a correct access token. Use your own access token instead.
+

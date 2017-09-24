@@ -1,0 +1,6 @@
+
+Function merge(l1,l2)
+
+Given two list as input, it returns list representing addition of elements in the input list.
+
+Use map function. For statement or any other explicit iteration is not allowed
