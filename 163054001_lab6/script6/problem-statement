@@ -1,0 +1,25 @@
+Given an input file,
+Write a script to print
+number of words, number of characters, no. of lines
+and no. of paragraphs in the file.
+
+note: whitespaces should not be considered as a characters or words.
+
+
+for example
+
+output for file
+
+
+    How are   	you
+  I am fine
+  Thank you!
+  
+  
+  How   are you?
+
+
+
+
+output:
+35 characrers, 11 words, 12 lines, 2 paragraphs

@@ -1,0 +1,4 @@
+BEGIN{RS = "!";FS= ",";printf "Id\tName\n"}
+{print NR"\t"$2 ;}
+END{print NR,"Records merged";} 
+

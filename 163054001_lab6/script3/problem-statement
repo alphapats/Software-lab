@@ -1,0 +1,24 @@
+Given input files contains new-lines and white spaces.
+
+Write a script to (i) collapse every sequence of white spaces
+between two words in a single line into a single space, and 
+(ii) collapse every sequence of white spaces 
+between two lines into a single newline.
+All other suffix and prefix whitespaces are to be deleted.
+
+print the output to screen.
+
+
+for example
+
+"    how  	are		you
+    
+    	
+    fine.    	
+    
+"
+    
+    becomes
+    
+"how are you
+fine."

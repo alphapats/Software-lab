@@ -1,0 +1,41 @@
+How to check your assignments: A ready demo
+
+nothing required from you here.. just run it and see
+that the wrong solution is wrong and the right one is right..
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Here we have a sample problem statement
+
+A correct solution for it    in    correct-Solutio.awk
+and a wrong solution for it  in    incorrect-Solution.awk
+
+There are two input test cases      input1    input2
+
+Their correct outputs are also given    output1    output2
+
+The script named checkMysolutionOnSample.sh  will compare the outputs of the script
+that you want to check with ideal ones already given.
+
+
+
+call the checker script in the following way:
+
+./checkMySolutionOnSample.sh    correct-Solutio.awk
+./checkMySolutionOnSample.sh    incorrect-Solution.awk 
+
+
+everytime it will give you the output of diff command
+
+If there is no difference report, the solution is correct for these test cases
+
+
+you are free to check for your own test cases as well
+
+The TAs will be using some hidden test cases over and above those given in the folders
+
+
+
+
+
+
+

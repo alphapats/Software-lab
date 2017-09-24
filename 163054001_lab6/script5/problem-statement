@@ -1,0 +1,17 @@
+
+Write a script to generate an html file from 
+a table. The first row is to be seen as field
+title top row in bold face font. 
+The input table can have any no of rows 
+and any no of columns.
+
+field separator in input file is any white space (tab,space or
+a combination of it)
+Record separator is default newline.
+
+Use borders in your table. 
+
+visually check by loading your html 
+in the browser if the html is giving the table
+title and the output correctly.
+

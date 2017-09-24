@@ -1,0 +1,19 @@
+Given an input file consisting of line in the line format:
+
+    1,X!2,Y!3,Z!
+
+
+
+Write a script which generates an output file of this format:
+
+1	X
+2	Y
+3	Z
+
+
+
+! is record separator
+, is field separator
+
+USE RS and FS variables to set these values for record separator
+and field separator

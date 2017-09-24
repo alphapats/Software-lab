@@ -1,0 +1,29 @@
+Given input file has 3 fields:
+
+First field is name of the process.
+Second field is pid(process-id) of process.
+Third field is ppid(parent process-id) of process.
+
+For a given pid your script should print parent trace 
+of given process identified as parameter to the script.
+
+e.g.
+if input is
+
+process pid ppid
+init    0     0
+netscape 1    0
+bash     2    0
+vi        3   2
+
+
+and the call is
+awk -f myscript.awk input1 -v p=3
+
+then the output is
+
+	vi->bash->init
+	
+
+p is a variable passed into the awk script
+Awk script can use variable p inside the script.

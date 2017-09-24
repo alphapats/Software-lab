@@ -1,0 +1,6 @@
+Given input file contains names of varying lengths in a compact format.
+
+you have to insert a space whenever a capital letter appears 
+somewhere inside the input name.
+
+print the output.

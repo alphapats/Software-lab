@@ -1,0 +1,28 @@
+Given input file has 3 fields.
+There are field titles and then data in each column.
+
+In our case, the input file has fields to represent team names, no of
+matches played, no of wins, tied matches.
+
+You have to calculate points scored by every teams and place it in the
+foruth column titled "Points".
+
+4 points for win, 0 for loss and 2 for tie.
+
+Write a script to generate the output on screen.
+
+
+for example, if the input is
+
+Team	Played	Wins	Tied 
+A	2	1	1
+B	2	0	1
+
+then the output is 
+
+Team	Played	Wins	Tied	Points
+A	2	1	1	6	
+B	2	0	1	2
+
+The table is tab separated
+

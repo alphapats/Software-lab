@@ -1,0 +1,11 @@
+Given two input files: input1 and input2 which have 
+records with two fields for IDs and Names,
+write a script to merge the two files, printing the result
+on screen. Print title of the tableas 
+ID	Name
+and in the end, print how many records got merged through message
+x Records merged
+x being the number of records merged
+
+
+The input files use ! and , as record and field separators.

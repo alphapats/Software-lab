@@ -1,0 +1,1 @@
+awk -f script9.awk -v p=7892 $1 > out
