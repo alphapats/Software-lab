@@ -1,0 +1,74 @@
+The following quiz is supposed to give you a feel for the kind of
+preparation/aptitude needed for taking this course.  You should be
+able to solve these problems easily; if not, in the least, you should
+find some excitement in solving such problems (and more complex ones).
+
+Put another way, the course requires that you already have 
+    (a) some knowledge of algorithms, 
+    (b) ability to read and understand complicated statements and
+        reason logically on their basis, 
+    (c) enthusiasm about solving puzzle-like problems, 
+    (d) willingness and patience to work hard if you dont already have
+        (a) or (b).  Please see me in this case after you have done
+        the quiz below.
+
+--------
+
+1.  Solve the recurrence:
+
+	T(n) = T(n/2) + O(log n)
+
+2.  How long does quicksort take to sort?  Answer this as precisely as
+you can.
+
+3.  If I draw 5 cards from a standard deck of cards, what is the
+probability that I will get (a) no aces, (b) exactly 2 aces.
+
+4.  Say that the Hamming distance between two bit strings of the same
+length is the number of positions in which they differ.  For example
+the distance between 10001 and 01001 is 2, since they differ in the
+most significant and the second most significant positions.  What is
+the number of bit strings that are at distance 3 from the bit string
+1001001?
+
+5.  Consider the statements (1) "If f(i) >= f(j) then q(i) >= q(j)",
+and (2) "If q(i) < q(j) then f(i) <= f(j)".  Relate these statements,
+i.e. state if they are equivalent, or if one implies the other etc, or
+if they are unrelated.  Be sure that you would be able to solve this
+problem if one of the >= was changed to >.
+
+6.  Suppose the average weight of a given set of 100 persons is 60 kg,
+and the average height is 160 cm.  Prove or disprove the following
+statements: 
+(1) There must exist at least one person weighing at most 60 kg.
+(2) There must exist at least one person weighing at most 60 kg and
+    having height at most 160 cm. 
+(3) There must exist at least one person weighing at most 120 kg and
+    having height at most 320 cm. 
+
+7.  Show that there exists a node in an n node tree, such that its
+    removal splits the tree into parts each having at most 2n/3 nodes.
+
+8.  Suppose for every bus route in the city of Mumbai you are given
+    information about the fare to travel from every stop on the route
+    to any other stop on the route.  I want to go from a given bus
+    stop x to another given bust stop y with minimum expense, changing
+    buses as many times as required.  Give an algorithm for this.
+
+9.  [Kleinberg-Tardos, Exercise 3.9] Suppose an n node m edge undirected
+    unweighted graph G=(V,E) contains two nodes s,t such that the
+    distance between s and t is strictly greater than n/2.  Show that
+    there must exist some node v, distinct from s and t, such that
+    deleting v from G destroys all s-t paths.  (In other words, the
+    graph obtained from G by deleting v contains no path from s to t.)
+    Give an algorithm with running time O(m+n) to find such a node v.
+
+10. [Kleinberg-Tardos, Exercise 3.10] Suppose we are given an n node m
+    edge undirected unweighted graph G=(V,E) and we identify two nodes
+    v and w in G.  Give an algorithm that computes the number of
+    shortest v-w paths in G.  The algorithm should not list all
+    shortest paths, just report their number.  The running time should
+    be O(m+n).  Two paths are considered different if they differ even
+    in one edge.
+
+-----

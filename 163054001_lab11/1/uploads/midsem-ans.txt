@@ -1,0 +1,167 @@
+
+CS 695
+Topics in Virtualization and Cloud Computing
+
+Mid-semester exam Answer Key
+----------------------------
+
+Q.1. True/False. Justification required.
+
+(a) False.
+The double-paging problem does not depend in full or para virtualization.
+If hypervisor performs demand paging (reclaim machine) pages assigned
+to virtual machines, double paging can always occur.
+
+(b) False.
+CR3 is privileged hardware state and para-virtualized or not, needs VMM
+intervention to check what the CR3 is updated with (CR3 is hence virtualized).
+If not virutalized, the CR3 can point to "illegal" page tables and isolation
+accross VMS cannot be guaranteed. With para-virtualization the update command
+to CR3 may be via a hypercall, but the VMM still intervenes.
+
+(c) True.
+Network packets (layer 2 frames) can be transmitted between Dom0 and DomU
+using the IO ring without layer 2 processing---header attachment, checksum
+calculation etc. Since the packet is already in the physical system and
+only has to cross a software boundary conventional Layer 2 processing 
+can be skipped. If this so, the guest OS front-end driver will work
+with a much simpler interface, e.g., one which points to L3 packet contents
+to be copied from a location stored in the IO ring.
+
+(d) True.
+Since sensitive instructions are alos privileged instructions, no critical
+instructions, all such intructions will generate ane exception. 
+The VMM can intervene via the trap-and-emulate framework for correct
+virtualization.
+
+(e) False.
+Even with a single VM, access to CR3 has to be protected, e.g.,
+not to over write memory regions of the hypervisor or not let it
+uses page not alloted to it.
+
+(f) True.
+If the Dom0 uses a Layer 2 software bridge to forward packets between
+the guest OSes and the outside network, all packets need to be inspected
+by the software bridge to make forwarding decisions.
+Hence, the physical NiC of the machine will have to be in promiscous mode,
+to accept all packets irrespective of whether the destination address
+matches MAC address of the physical NiC.
+
+False.
+If Dom0 uses a Layer router/NAT functionality to connect VMs to the 
+external network, then the physical NiC does not have to operate in 
+promiscous mode. Layer 3 routing will use IP if the Dom0 router and
+it's corresponding Layer 2 address to get packets to Dom0.
+
+(g) True.
+After rollback to a checkpointed state, all external eventss are
+non-deterministic and hence tghe system can produce output not similar
+to the one after checkpoint and before failure.
+e.g., the book that you were looking for is now sold out!
+
+(h) False.
+All network state has to be protected before check pointing.
+UDP itself might be unreliable, but the data that it sends may
+expose speculative state. e.g., a DNS update that is no longer
+valid as the system crashed.
+
+(i) False.
+Perform so many iterations that very few pages are left to transfer
+in the stop-and-copy phase. To get to this point may need several
+iterations, or each iteration maybe very slow due to low available
+network bandwidth. In such cases, the down time will be reduced but
+the migration time will be very large.
+
+(j) False.
+G&P requirements are for design of VMMs, nothing to do with generic
+cloud services.
+
+Q.2.
+(a) 
+- If page fault is only due to the invalidation of the Page Table entries in 
+  which no disk access is required to handle the page fault then it is minor 
+  page fault.
+- If Disk access is requiered to handle the page fault then it is major 
+  page fault.  
+
+Q.2.
+(b)
+- Depends on your heuristic but your heuristic should consider
+  Memory and CPU usage and its impact on both. Graphs should be
+  relevant to the question for the experiment.
+
+Q.3.
+(a)
+- hypercalls to update page tables for memory virtualization.
+  no need to chase CR3.
+- no multi-level device emulation required for IO.
+  split-device/driver IO model, lets guest interface with a much
+  simpler device specification.
+- can implement grey-box techniques---guest OS helping hypervisor management
+  explicitly. e.g., freeing all page cache pages during migration (balloon
+  size need not be specified, guest frees pages and tells how many freed),
+  stunning rogue processes.
+- guest OS self-ballooning. without hypervisor commands, VMs balloon out
+  unused memory and let hypervisor know of the same.
+Q.3.
+(b)
+- Discussed in the class. 
+- V2P and P2M both should be shown in the diagram.
+- All necessary steps to get final physical address of page are 
+  done in hardware.
+- Faults should be handled at both VM and VMM level.
+
+Q.3.
+(c)
+- Discussed in the class. 
+- V2P and V2M both should be shown in the diagram.
+- Final physical address of page is obtained by accessing the Shadow page table.
+- Page tables at both level (V2P and V2M) are consistent by making page table 
+  pages write protected.
+- Faults should be handled at both VM and VMM level.
+
+Q.3.
+(d)
+- each hardware timer interrupt is passed on to the VM.
+  this is done via the VIRQ method---a virtual register (memory location)
+  is set to indicate a timer interrupt and when the VM is scheduled/resumed,
+  it's VCPU state (copied from the memory state) will reflect a pending
+  timer interrtupt.
+  the VM will proces the interrupt and increment time.
+  note that timer interrupts are periodic interrupts, e.g., one every 10 ms
+  and are the basis to adjust the notion of changing time.
+
+- if a VM is not scheduled the VMM can do one of two things,
+  - bunch all timer interrupts and deliver them when the VM is scheduled.
+    this has the effect of a very fast rate of change of time.
+    in 1 sec, time changes by several seconds.
+  - ignore interrupts when VM is not scheduled.
+    in this case the wall-clock time of the VM lags behind actual time.
+    10.03 am in the VM is actually 10.03 pm in the real world!
+  - in both of the above cases virtual time (time in the VM) has 
+    an issue, either it changes too fast or lags behind.
+  - if time changes too fast, processes may not be scheduled for their
+    actual time quantum and real-time deadlines appear too soon!
+    not enough time to finish work before deadline.
+  - it time lags, deadlines based on real clock may delayed.
+    wake me up at 6 am! cannot be trusted.
+
+Q.4.
+(a)
+- Parameters:
+  Size of WWS, Available N/W bandwidth, Page dirty rate, VMSize.
+- Metric:
+  Migration time, Down time.
+ 
+- Available N/W bandwidth will affect post-copy live migration in terms of 
+  both migration and down time while VM size will affect migration time.
+
+
+Q.4.
+(b) 
+- Find the number of pages that can be migrated in bounded time 
+  depending on the resources.
+- Maintain a limit on the number of pages to be migrated during bounded time.
+- Flush extra pages to the secondary VM (store at other location)
+  if number of dirty pages or pages to be migrated rise above the limit.
+
